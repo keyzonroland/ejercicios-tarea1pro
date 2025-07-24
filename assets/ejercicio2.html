@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Subsidio de Arriendo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Subsidio de Arriendo de Vivienda</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ejercicio1.html">Ejercicio 1</a></li>
+                <li><a href="ejercicio2.html">Ejercicio 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2>Formulario de Postulación</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: #666;">
+                    Complete el formulario para verificar su elegibilidad al subsidio
+                </p>
+
+                <form id="subsidyForm">
+                    <div class="form-group">
+                        <label for="age">Edad (años):</label>
+                        <input type="number" id="age" name="age" min="1" max="120" required>
+                        <small>Debe ser mayor de 18 años</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hasValidId">¿Posee cédula de identidad vigente?</label>
+                        <select id="hasValidId" name="hasValidId" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="si">Sí, cédula de identidad chilena</option>
+                            <option value="extranjero">Sí, cédula de identidad para extranjeros</option>
+                            <option value="no">No poseo cédula vigente</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="savings">Ahorro en UF (monto actual):</label>
+                        <input type="number" id="savings" name="savings" min="0" step="0.01" required>
+                        <small>Debe tener un mínimo de 4 UF en cuenta de ahorro para vivienda</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accountOwner">¿A nombre de quién está la cuenta de ahorro?</label>
+                        <select id="accountOwner" name="accountOwner" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="postulante">A mi nombre (postulante)</option>
+                            <option value="conyuge">A nombre de mi cónyuge</option>
+                            <option value="conviviente">A nombre de mi conviviente civil</option>
+                            <option value="otro">A nombre de otra persona</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="socialVulnerability">Porcentaje de vulnerabilidad social (%):</label>
+                        <input type="number" id="socialVulnerability" name="socialVulnerability" min="0" max="100" required>
+                        <small>Según Registro Social de Hogares. Debe estar en el 70% más vulnerable</small>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">
+                        Verificar Elegibilidad
+                    </button>
+                </form>
+
+                <div id="result" class="result" style="display: none;"></div>
+
+                <div style="margin-top: 2rem; padding: 1rem; background: #e3f2fd; border-radius: 5px;">
+                    <h4>Información del Subsidio:</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li><strong>Monto:</strong> 4.2 UF mensuales</li>
+                        <li><strong>Máximo total:</strong> 170 UF</li>
+                        <li><strong>Plazo:</strong> 8 años (uso consecutivo o fragmentado)</li>
+                        <li><strong>Requisitos mínimos:</strong> Mayor de 18 años, cédula vigente, 4 UF de ahorro, estar en el 70% más vulnerable</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Subsidio de Arriendo - Información referencial del Estado de Chile.</p>
+    </footer>
+
+    <script src="scripts/ejercicio2.js"></script>
+</body>
+</html>

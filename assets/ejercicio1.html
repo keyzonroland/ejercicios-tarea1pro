@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Convertidor USD a CLP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Convertidor de Dólares a Pesos Chilenos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ejercicio1.html">Ejercicio 1</a></li>
+                <li><a href="ejercicio2.html">Ejercicio 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="converter-container">
+                <h2>Convertidor USD → CLP</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: #666;">
+                    Tipo de cambio: <strong>$745 CLP por 1 USD</strong>
+                </p>
+                
+                <div class="form-group">
+                    <label for="dollarAmount">Ingrese el monto en dólares (USD):</label>
+                    <input 
+                        type="text" 
+                        id="dollarAmount" 
+                        placeholder="Ej: 100 o 100.50" 
+                        autocomplete="off"
+                    >
+                    <small style="color: #666; font-size: 0.8rem;">
+                        Puede incluir centavos usando punto decimal (ej: 125.75)
+                    </small>
+                </div>
+
+                <button type="button" onclick="convertToPesos()" class="btn" style="width: 100%;">
+                    Convertir a Pesos Chilenos
+                </button>
+
+                <div id="result" class="result" style="display: none;"></div>
+
+                <div style="margin-top: 2rem; padding: 1rem; background: #e9ecef; border-radius: 5px;">
+                    <h4>Características del convertidor:</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Acepta solo números válidos</li>
+                        <li>Permite montos con centavos (decimales)</li>
+                        <li>Tipo de cambio fijo: $745 CLP</li>
+                        <li>Formato de salida con separadores de miles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Convertidor USD-CLP. Tipo de cambio referencial.</p>
+    </footer>
+
+    <script src="scripts/ejercicio1.js"></script>
+</body>
+</html>
