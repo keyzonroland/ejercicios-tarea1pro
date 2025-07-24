@@ -198,7 +198,7 @@ function displayResult(result) {
     if (result.isEligible) {
         html += `
             <div style="background: #d4edda; border: 1px solid #c3e6cb; padding: 1rem; border-radius: 5px; margin-top: 1rem;">
-                <h4 style="color: #155724; margin-top: 0;">🎉 ¡ELEGIBLE PARA EL SUBSIDIO!</h4>
+                <h4 style="color: #155724; margin-top: 0;"> ¡ELEGIBLE PARA EL SUBSIDIO!</h4>
                 <p style="color: #155724; margin: 0.5rem 0;">Cumple con todos los requisitos para postular al subsidio de arriendo de vivienda.</p>
                 <div style="margin-top: 1rem;">
                     <strong>Información del beneficio:</strong>
